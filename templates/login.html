@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <section class="card login-card">
+    <div class="logo-container">
+      <img src="{{ url_for('static', filename='assets/images/logo.svg') }}" alt="IMCCheck Logo" class="login-logo">
+      <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/styles.css') }}" />
+      <h1>IMC-Check</h1>
+    </div>
+    <h2>Login</h2>
+    <form class="form" method="post">
+      <div class="form-row">
+        <label for="username">Usuário</label>
+        <input type="text" id="username" name="username" required />
+      </div>
+      <div class="form-row">
+        <label for="password">Senha</label>
+        <input type="password" id="password" name="password" required />
+      </div>
+      <div class="form-actions">
+        <button type="submit" class="button">Entrar</button>
+      </div>
+      <p style="color:#9ca3af;margin-top:12px;">Por enquanto, qualquer usuário e senha são aceitos.</p>
+    </form>
+    <p style="margin-top:16px;">
+      Não tem conta? <a href="{{ url_for('register') }}">Criar conta</a>
+    </p>
+  </section>
+</body>
+</html>
